@@ -486,11 +486,8 @@ class HTMLResource(GenericResource):
     def _get_watermark(self):
         # comment text should be in unicode
         return dedent("""
-        * PyWebCopy Engine [version %s]
-        * Copyright 2020; Raja Tomar
-        * File mirrored from [%s]
         * At UTC datetime: [%s]
-        """) % (__version__, self.response.url, datetime.utcnow())
+        """) % (datetime.utcnow())
 
 
 class CSSResource(GenericResource):
